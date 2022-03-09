@@ -2,12 +2,14 @@
 package com.example.cardapi.model;
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Card {
   
   private final UUID id;
   private final String name;
 
-  public Card(UUID id, String name) {
+  public Card(@JsonProperty("id") UUID id, @JsonProperty("name") String name) {
     this.id = id;
     this.name = name;
   }
