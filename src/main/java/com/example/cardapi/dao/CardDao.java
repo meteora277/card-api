@@ -6,10 +6,10 @@ import java.util.UUID;
 
 public interface CardDao {
 
-  int insertPerson(UUID id, Card card);
+  int insertCard(UUID id, Card card);
 
-  default int addCard(Card card){
+  default int insertCard(Card card){
     UUID id = UUID.randomUUID();
-    return insertPerson(id, card);
+    return insertCard(id, card);
   }
 }
